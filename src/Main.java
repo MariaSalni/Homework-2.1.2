@@ -4,17 +4,19 @@ public class Main {
         int balance = 100;
         int replenishmentAmount = 1100;
 
+        int bonus;
+
         if (replenishmentAmount > 1000) {
-            int bonus = replenishmentAmount/100;
-            System.out.println("Количество бонусных рублей:" + bonus);
-        }
+            bonus = replenishmentAmount/100;
+            }
 
-        if (replenishmentAmount < 1000) {
-            int bonus = 0;
-            System.out.println("Количество бонусных рублей:" + bonus);
-        }
+        else {
+            bonus = 0;
+            }
 
-        int totalAmount = balance + replenishmentAmount;
+        int totalAmount = balance + replenishmentAmount + bonus;
+
+        System.out.println("Количество бонусных рублей:" + bonus);
         System.out.println("Итоговый счет:" + totalAmount);
 
     }
